@@ -1,0 +1,14 @@
+.admin-dashboard {
+    display: flex;
+    height: 100vh;
+    background: #f4f4f4;
+  }
+  
+  .admin-content {
+    flex-grow: 1;
+    padding: 20px;
+    background: white;
+    border-left: 2px solid #ddd;
+    overflow-y: auto;
+  }
+  

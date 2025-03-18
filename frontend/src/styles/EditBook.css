@@ -1,0 +1,107 @@
+/* ✅ Edit & Add Book Page Styling */
+.add-book-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .add-book-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .add-book-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .add-book-form label {
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .add-book-form input,
+  .add-book-form select,
+  .add-book-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .add-book-form textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .file-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .file-label {
+    display: inline-block;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .file-label input {
+    display: none;
+  }
+  
+  .add-book-btn {
+    background: #28a745;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .add-book-btn:hover {
+    background: #218838;
+  }
+  
+  .add-book-back {
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .add-book-back:hover {
+    text-decoration: underline;
+  }
+  
+  /* ✅ Book Cover Preview */
+  .book-cover-preview {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .preview-image {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  

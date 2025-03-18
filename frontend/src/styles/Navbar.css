@@ -1,0 +1,511 @@
+✅ Navbar Container
+.navbar {
+  background: #fff;
+  padding: 12px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  max-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* ✅ Left Section (Logo) */
+.navbar-left {
+  flex-grow: 1;
+}
+
+.navbar-brand {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+/* ✅ Middle Section (Nav Links) */
+.navbar-middle {
+  flex-grow: 2;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.navbar-middle li {
+  list-style: none;
+}
+
+.navbar-middle a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-middle a:hover {
+  color: #007bff;
+}
+
+/* ✅ Right Section (User Actions) */
+.navbar-right {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+/* ✅ Icons */
+.icon-container {
+  position: relative;
+}
+
+.nav-icon {
+  font-size: 20px;
+  color: #333;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-icon:hover {
+  color: #007bff;
+}
+
+.badge {
+  background: blue;
+  color: white;
+  font-size: 8px;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 50%;
+  position: absolute;
+  top: -12px;
+  right: -15px;
+}
+
+/* ✅ User Avatar */
+.user-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.user-avatar:hover {
+  opacity: 0.8;
+}
+
+/* ✅ Default Avatar Icon */
+.default-avatar {
+  font-size: 24px;
+  color: #6e6363;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* ✅ User Dropdown */
+.user-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.user-icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+.user-icon:hover {
+  color: #007bff;
+}
+
+/* ✅ Fix Dropdown Disappearance on Hover */
+.user-dropdown:hover .dropdown-menu {
+  display: block; /* Ensure dropdown remains visible */
+}
+
+/* ✅ Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  min-width: 160px;
+  padding: 8px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.dropdown-menu a,
+.dropdown-menu button {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: block;
+  transition: background 0.3s ease-in-out;
+  width: 100%;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu button:hover {
+  background: #007bff;
+  color: white;
+  border-radius: 3px;
+}
+
+/* ✅ Auth Buttons */
+.auth-links {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-auth {
+  text-decoration: none;
+  padding: 8px 12px;
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-auth:hover {
+  background: #0056b3;
+}
+
+/* ✅ Logout Button */
+.btn-logout {
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: none;
+  color: #333;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.btn-logout:hover {
+  background: #ff4d4d;
+  color: white;
+  border-radius: 3px;
+}
+
+/* ✅ Mobile Responsive: Hide Text in Navbar Links */
+@media (max-width: 768px) {
+ /* ✅ Navbar Container */
+.navbar {
+  background: #fff;
+  padding: 12px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  max-width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column; /* Default is stacking vertically */
+}
+
+/* ✅ Navbar Flexbox */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  flex-direction: row; /* Default is horizontal alignment */
+}
+
+/* ✅ Left Section (Logo) */
+.navbar-left {
+  flex-grow: 1;
+  /* Takes necessary space */
+}
+
+.navbar-brand {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+/* ✅ Middle Section (Nav Links) */
+.navbar-middle {
+  flex-grow: 2;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  /* Default for larger screens */
+  flex-direction: row; /* Horizontal alignment by default */
+}
+
+.navbar-middle li {
+  list-style: none;
+}
+
+.navbar-middle a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-middle a:hover {
+  color: #007bff;
+}
+
+/* ✅ Right Section (User Actions) */
+.navbar-right {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+/* ✅ Icons */
+.icon-container {
+  position: relative;
+}
+
+.nav-icon {
+  font-size: 20px;
+  color: #333;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-icon:hover {
+  color: #007bff;
+}
+
+.badge {
+  background: blue;
+  color: white;
+  font-size: 8px;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 50%;
+  position: absolute;
+  top: -12px;
+  right: -15px;
+}
+
+/* ✅ User Avatar */
+.user-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.user-avatar:hover {
+  opacity: 0.8;
+}
+
+/* ✅ Default Avatar Icon */
+.default-avatar {
+  font-size: 24px;
+  color: #6e6363;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* ✅ User Dropdown */
+.user-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.user-icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+.user-icon:hover {
+  color: #007bff;
+}
+
+/* ✅ Fix Dropdown Disappearance on Hover */
+.user-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* ✅ Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  min-width: 160px;
+  padding: 8px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.dropdown-menu a,
+.dropdown-menu button {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: block;
+  transition: background 0.3s ease-in-out;
+  width: 100%;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu button:hover {
+  background: #007bff;
+  color: white;
+  border-radius: 3px;
+}
+
+/* ✅ Auth Buttons */
+.auth-links {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-auth {
+  text-decoration: none;
+  padding: 8px 12px;
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-auth:hover {
+  background: #0056b3;
+}
+
+/* ✅ Logout Button */
+.btn-logout {
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: none;
+  color: #333;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.btn-logout:hover {
+  background: #ff4d4d;
+  color: white;
+  border-radius: 3px;
+}
+
+/* ✅ Mobile Responsive: Left and Right sections horizontally aligned and middle below */
+@media (max-width: 768px) {
+  .navbar-middle {
+    display: none;
+  }
+
+  /* Left section stays on top */
+  .navbar-left {
+      width: 100%; /* Takes full width */
+      margin-bottom: 10px; /* Space between left and middle */
+      text-align: center; /* Center content in left section */
+  }
+
+  /* Right section stays on top */
+  .navbar-right {
+      width: 100%; /* Takes full width */
+      margin-bottom: 10px; /* Space between right and middle */
+      text-align: center; /* Center content in right section */
+      margin-right: 40px;
+  }
+
+  /* Middle section moves below */
+  .navbar-middle {
+      width: 100%; /* Takes full width */
+      flex-direction: column; /* Stack nav items vertically */
+      gap: 10px; /* Adjusted gap for mobile view */
+      align-items: center; /* Center the links */
+  }
+}
+}
+
+/* ✅ Larger Devices (Tablets and Above) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar-middle {
+      gap: 8px; /* Slightly reduced gap */
+      /* padding-right: 14px; */
+      padding-left: 0;
+  }
+
+  .navbar-brand {
+      font-size: 16px; /* Smaller logo text */
+  }
+
+  .navbar-right {
+      gap: 10px; /* Adjust gap */
+  }
+
+}
+
+/* ✅ Large Devices (Desktops and Larger Screens) */
+@media (min-width: 1025px) {
+  .navbar-middle {
+      gap: 30px; /* Normal gap for desktop */
+  }
+
+  .navbar-right {
+      gap: 20px; /* Larger gap for user actions */
+  }
+
+}

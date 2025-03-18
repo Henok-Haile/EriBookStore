@@ -1,0 +1,323 @@
+/* ✅ Admin Dashboard - General Styling */
+.admin-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Section Titles */
+.admin-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* ✅ Admin Navigation Links */
+.admin-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ✅ Admin Navigation Grid */
+.admin-grid {
+  display: flex;
+  justify-content: center;
+  /* ✅ Centers items */
+  gap: 20px;
+  /* ✅ Adds space between items */
+  flex-wrap: wrap;
+  /* ✅ Ensures responsiveness */
+  margin-top: 20px;
+}
+
+/* ✅ General Styling for Admin Add Sections */
+.admin-add-section {
+  display: flex;
+  justify-content: center;
+  /* ✅ Center horizontally */
+  align-items: center;
+  /* ✅ Center vertically */
+  flex-direction: column;
+  /* ✅ Arrange content vertically */
+  gap: 20px;
+  /* ✅ Add space between items */
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* ✅ Ensure Forms Are Centered */
+.admin-add-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  /* ✅ Limit width for better appearance */
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Input Fields */
+.admin-add-section input,
+.admin-add-section select,
+.admin-add-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  /* ✅ Add spacing between inputs */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* ✅ Submit Button */
+.admin-add-section button {
+  background: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.admin-add-section button:hover {
+  background: #218838;
+}
+
+.admin-card {
+  padding: 15px 20px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.admin-card:hover {
+  background: #0056b3;
+}
+
+/* ✅ Back to Dashboard Button */
+.admin-back {
+  display: inline-block;
+  margin-top: 20px;
+  color: #007bff;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ✅ Back Button */
+.admin-back-link {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.admin-back:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Filter Container - Improved Spacing */
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  /* ✅ Adds space between input & select */
+  margin-bottom: 20px;
+}
+
+/* ✅ Search Input */
+.filter-container input {
+  flex-grow: 1;
+  /* ✅ Makes input take available space */
+  max-width: 350px;
+  /* ✅ Ensures input is not too short */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* ✅ Select Dropdown */
+.filter-container select {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* ✅ Admin Tables - Improved Spacing */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-table th {
+  background: #007bff;
+  color: white;
+}
+
+/* ✅ Action Buttons */
+.btn-approve,
+.btn-delete,
+.btn-promote {
+  padding: 8px 12px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* ✅ Approve Button */
+.btn-approve {
+  background: #28a745;
+  color: white;
+}
+
+.btn-approve:hover {
+  background: #218838;
+}
+
+/* ✅ Delete Button */
+.btn-delete {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: #c82333;
+}
+
+/* ✅ Promote Button */
+.btn-promote {
+  background: #ffc107;
+  color: black;
+}
+
+.btn-promote:hover {
+  background: #e0a800;
+}
+
+/* ✅ Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* ✅ User Avatar */
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ✅ Bulk Delete Button */
+.btn-bulk-delete {
+  margin-top: 15px;
+  background: #dc3545;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-bulk-delete:hover {
+  background: #c82333;
+}
+
+/* ✅ Edit Book Form */
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.admin-form button {
+  background: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.admin-form button:hover {
+  background: #218838;
+}
+
+/* ✅ Edit Button */
+.btn-edit {
+  background: #ffc107;
+  color: black;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-edit:hover {
+  background: #e0a800;
+}

@@ -1,0 +1,101 @@
+/* ✅ Make the whole app take full height */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ✅ Ensure content pushes the footer down */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+.content {
+  flex: 1; /* Pushes footer to the bottom */
+}
+
+/* ✅ General Home Page Layout */
+.home-container {
+  display: flex;
+  padding: 20px;
+}
+
+.home-content {
+  flex: 3;
+  padding: 20px;
+}
+
+/* ✅ Hero Section */
+.hero-section {
+  background: #007bff;
+  color: white;
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.hero-section h1 {
+  font-size: 2rem;
+}
+
+.hero-section .btn-primary {
+  background: white;
+  color: #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ✅ Sidebar Styles */
+.sidebar {
+  flex: 1;
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.sidebar h3 {
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.sidebar select,
+.sidebar input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+/* ✅ Footer Styles */
+.footer {
+  background: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto; /* Ensures it sticks at the bottom */
+}
+
+.footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+

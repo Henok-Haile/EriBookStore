@@ -1,0 +1,308 @@
+/* ✅ General Layout */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+  width: 100%;
+}
+
+/* ✅ Hero Section */
+.hero-section {
+  background: #007bff;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.hero-section h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.hero-section .btn-primary {
+  background: white;
+  color: #007bff;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.3s;
+  border: 2px solid #007bff;
+}
+
+.hero-section .btn-primary:hover {
+  background: #0056b3;
+  color: white;
+}
+
+/* ✅ Featured Books Section */
+.featured-section {
+  text-align: center;
+  padding: 30px;
+  width: 100%;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.featured-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/* ✅ Grid for Books */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  padding: 10px;
+}
+
+/* ✅ Book Cards */
+.book-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-card img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.book-card h5 {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.book-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.book-card .btn-primary {
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+/* ✅ Hover Effect */
+.book-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ✅ "View All Books" Button */
+.view-all-books {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-secondary {
+  background: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #0056b3;
+}
+
+/* ✅ Testimonials Section (Swiper.js Slider) */
+.testimonials-section {
+  text-align: center;
+  width: 100%;
+  padding: 50px 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+}
+
+.testimonials-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* ✅ Swiper Slider */
+.testimonial-slider {
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* ✅ Testimonial Cards */
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ✅ Testimonial Image */
+.testimonial-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* ✅ Testimonial Text */
+.testimonial-card p {
+  font-size: 16px;
+  font-style: italic;
+  color: #555;
+}
+
+/* ✅ Testimonial Name */
+.testimonial-card span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* ✅ Swiper Pagination Styling */
+.swiper-pagination {
+  position: relative;
+  margin-top: 15px;
+}
+
+.swiper-pagination-bullet {
+  background: #007bff;
+  opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* ✅ Newsletter Section */
+.newsletter-section {
+  text-align: center;
+  width: 100%;
+  padding: 40px;
+  background-color: #e3f2fd;
+  border-radius: 10px;
+}
+
+.newsletter-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.newsletter-section .newsletter-input {
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.newsletter-section .btn-primary {
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ✅ About Section */
+.about-section {
+  text-align: left;
+  width: 100%;
+  padding: 40px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+  padding: 5px;
+}
+
+.about-section p::first-letter {
+  margin-left: 20px; /* Adjust the value as needed */
+  font-weight: bold; /* Optional: make the first letter bold */
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .book-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .testimonials-section h2 {
+    font-size: 2rem;
+  }
+  
+  .testimonial-card {
+    padding: 20px;
+  }
+
+  .testimonial-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .testimonial-message {
+    font-size: 16px;
+  }
+  
+  .testimonial-card p {
+    font-size: 14px;
+  }
+
+  .testimonial-card span {
+    font-size: 12px;
+  }
+}
