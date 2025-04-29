@@ -52,6 +52,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
+      
       {/* ✅ Hero Section */}
       <div className="hero-section">
         <h1>Discover Your Next Favorite Book 📚</h1>
