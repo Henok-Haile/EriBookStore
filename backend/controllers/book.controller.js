@@ -5,7 +5,7 @@ import { Book } from "../models/book.model.js";
  * 🛠 Helper Function: Build Query Based on Filters (Search, Price, Rating, Year)
  */
 const buildQuery = (filters) => {
-  const { search, minPrice, maxPrice, minRating, maxRating, publishYear } = filters;
+  const { search, minPrice, maxPrice, minRating, maxRating, publishYear, category } = filters;
 
   let query = { isApproved: true }; // ✅ Users can only see approved books
 
@@ -84,40 +84,70 @@ const getPagination = (page, limit) => {
  */
 
 
+// export const getBooks = async (req, res) => {
+//   try {
+//     const filters = req.query || {}; // ✅ Ensure filters is always an object
+//     console.log("🔍 Incoming Filters:", filters);
+
+//     const { search, page, limit, sort, minPrice, maxPrice, minRating, maxRating, publishYear, category } = filters;
+
+//     let query = { isApproved: true }; // ✅ Users can only see approved books
+
+//     if (search) {
+//       query.$or = [
+//         { title: { $regex: search, $options: "i" } },
+//         { author: { $regex: search, $options: "i" } }
+//       ];
+//     }
+
+//     if (category && category !== "All") {
+//       query.category = { $regex: new RegExp(`^${category}$`, "i") };
+//     }
+
+//     if (minPrice) query.price = { ...query.price, $gte: Number(minPrice) };
+//     if (maxPrice) query.price = { ...query.price, $lte: Number(maxPrice) };
+
+//     if (minRating) query.averageRating = { ...query.averageRating, $gte: Number(minRating) };
+//     if (maxRating) query.averageRating = { ...query.averageRating, $lte: Number(maxRating) };
+
+//     if (publishYear) query.publishYear = Number(publishYear);
+
+//     console.log("🔍 Final Query:", JSON.stringify(query, null, 2));
+
+//     const sortOption = getSortOptions(sort);
+//     const pageNum = Number(filters.page) || 1;
+//     const limitNum = Number(filters.limit) || 12;
+//     const skip = (pageNum - 1) * limitNum;
+
+//     const books = await Book.find(query)
+//       .sort(sortOption)
+//       .skip(skip)
+//       .limit(limitNum)
+//       .populate("userId", "name email");
+
+//     const totalBooks = await Book.countDocuments(query);
+
+//     res.json({
+//       totalBooks,
+//       page: pageNum,
+//       totalPages: Math.ceil(totalBooks / limitNum),
+//       books,
+//     });
+
+//   } catch (error) {
+//     console.error("🔥 Server Error in getBooks:", error.message);
+//     res.status(500).json({ message: `Server error while fetching books: ${error.message}` });
+//   }
+// };
+
 export const getBooks = async (req, res) => {
   try {
-    const filters = req.query || {}; // ✅ Ensure filters is always an object
+    const filters = req.query || {};
     console.log("🔍 Incoming Filters:", filters);
 
-    const { search, page, limit, sort, minPrice, maxPrice, minRating, maxRating, publishYear, category } = filters;
-
-    let query = { isApproved: true }; // ✅ Users can only see approved books
-
-    if (search) {
-      query.$or = [
-        { title: { $regex: search, $options: "i" } },
-        { author: { $regex: search, $options: "i" } }
-      ];
-    }
-
-    if (category && category !== "All") {
-      query.category = { $regex: new RegExp(`^${category}$`, "i") };
-    }
-
-    if (minPrice) query.price = { ...query.price, $gte: Number(minPrice) };
-    if (maxPrice) query.price = { ...query.price, $lte: Number(maxPrice) };
-
-    if (minRating) query.averageRating = { ...query.averageRating, $gte: Number(minRating) };
-    if (maxRating) query.averageRating = { ...query.averageRating, $lte: Number(maxRating) };
-
-    if (publishYear) query.publishYear = Number(publishYear);
-
-    console.log("🔍 Final Query:", JSON.stringify(query, null, 2));
-
-    const sortOption = getSortOptions(sort);
-    const pageNum = Number(filters.page) || 1;
-    const limitNum = Number(filters.limit) || 12;
-    const skip = (pageNum - 1) * limitNum;
+    const query = buildQuery(filters); // ✅ Use helper function
+    const sortOption = getSortOptions(filters.sort);
+    const { pageNum, limitNum, skip } = getPagination(filters.page, filters.limit);
 
     const books = await Book.find(query)
       .sort(sortOption)
@@ -133,13 +163,11 @@ export const getBooks = async (req, res) => {
       totalPages: Math.ceil(totalBooks / limitNum),
       books,
     });
-
   } catch (error) {
     console.error("🔥 Server Error in getBooks:", error.message);
     res.status(500).json({ message: `Server error while fetching books: ${error.message}` });
   }
 };
-
 
 
 // ✅ Fetch all books (Admins can see all books, including unapproved ones)
